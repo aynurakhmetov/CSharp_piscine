@@ -1,0 +1,16 @@
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/Day00/ex01/obj/Debug/net5.0/ex01.csprojAssemblyReference.cache
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/Day00/ex01/obj/Debug/net5.0/ex01.GeneratedMSBuildEditorConfig.editorconfig
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/Day00/ex01/obj/Debug/net5.0/ex01.AssemblyInfoInputs.cache
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/Day00/ex01/obj/Debug/net5.0/ex01.AssemblyInfo.cs
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/Day00/ex01/obj/Debug/net5.0/ex01.csproj.CoreCompileInputs.cache
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/Day00/ex01/bin/Debug/net5.0/ex01
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/Day00/ex01/bin/Debug/net5.0/ex01.deps.json
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/Day00/ex01/bin/Debug/net5.0/ex01.runtimeconfig.json
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/Day00/ex01/bin/Debug/net5.0/ex01.runtimeconfig.dev.json
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/Day00/ex01/bin/Debug/net5.0/ex01.dll
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/Day00/ex01/bin/Debug/net5.0/ref/ex01.dll
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/Day00/ex01/bin/Debug/net5.0/ex01.pdb
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/Day00/ex01/obj/Debug/net5.0/ex01.dll
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/Day00/ex01/obj/Debug/net5.0/ref/ex01.dll
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/Day00/ex01/obj/Debug/net5.0/ex01.pdb
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/Day00/ex01/obj/Debug/net5.0/ex01.genruntimeconfig.cache
