@@ -5,7 +5,7 @@ namespace queue
     public class CashRegister
     {
         private string Title { get; set; }
-        public Queue<Customer> customers;
+        public Queue<Customer> customers { get; set; }
 
         public CashRegister(string t)
         {
