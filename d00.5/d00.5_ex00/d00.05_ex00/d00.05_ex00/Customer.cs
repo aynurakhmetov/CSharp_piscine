@@ -1,6 +1,6 @@
 using System;
 
-namespace ex01
+namespace queue
 {
     public class Customer
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace ex00
+namespace queue
 {
     class Storage
     {

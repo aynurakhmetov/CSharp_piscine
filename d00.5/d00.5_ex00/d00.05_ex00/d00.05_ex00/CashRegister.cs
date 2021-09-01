@@ -1,19 +1,14 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using ex01;
 
-namespace ex03
+namespace queue
 {
     public class CashRegister
     {
-        private string Name { get; set; }
         private string Title { get; set; }
         public Queue<Customer> customers;
 
-        public CashRegister(string n, string t)
+        public CashRegister(string t)
         {
-            this.Name = n;
             this.Title = t;
         }
 
