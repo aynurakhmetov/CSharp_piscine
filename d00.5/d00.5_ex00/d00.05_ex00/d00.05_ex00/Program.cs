@@ -1,19 +1,29 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using queue;
 
-var customer1 = new Customer("Anya", 1);
-var customer2 = new Customer("Yan", 2);
-var customer3 = new Customer("Vlad", 3);
-customer1.FillCart(15);
-customer2.FillCart(15);
-customer3.FillCart(15);
-Console.WriteLine(customer1.ToString() + ", Number of items in his cart = " + customer1.NumOfItemsInCart);
-Console.WriteLine(customer2.ToString() + ", Number of items in his cart = " + customer2.NumOfItemsInCart);
-Console.WriteLine(customer3.ToString() + ", Number of items in his cart = " + customer3.NumOfItemsInCart);
-var cushreg1 = new CashRegister("title1");
-var cushreg2 = new CashRegister("title1");
-var cushreg3 = new CashRegister("title2");
-Console.WriteLine(cushreg1 == cushreg2);
-Console.WriteLine(cushreg1 == cushreg3);
-Console.WriteLine(cushreg1 != cushreg2);
-Console.WriteLine(cushreg1 != cushreg3);
+Store store = new Store(40, 30);
+var customers = new List<Customer>();
+customers.Add(new Customer("Aynur", 1));
+customers.Add(new Customer("Aydar", 2));
+customers.Add(new Customer("Ayrat", 3));
+customers.Add(new Customer("Aygul", 4));
+customers.Add(new Customer("Ivan", 5));
+customers.Add(new Customer("Igor", 6));
+customers.Add(new Customer("Ilarion", 7));
+customers.Add(new Customer("Ilya", 8));
+customers.Add(new Customer("Ian", 9));
+customers.Add(new Customer("Kilrill", 10));
+
+while (store.IsOpen())
+{
+    foreach (var customer in customers)
+    {
+        customer.FillCart(7);
+        if (customer.NumOfItemsInCart <= store.StorageOfStore.NumOfGoods)
+            store.StorageOfStore.NumOfGoods -= customer.NumOfItemsInCart;
+        else
+        {
+        }
+        customer.LeastNumOfCustomers(store._Cashregisters).customers.Enqueue(customer);
+    }
+}

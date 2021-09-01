@@ -10,6 +10,7 @@ namespace queue
         public CashRegister(string t)
         {
             this.Title = t;
+            customers = new Queue<Customer>();
         }
 
         public override string ToString()

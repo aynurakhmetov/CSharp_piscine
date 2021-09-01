@@ -2,7 +2,7 @@ using System;
 
 namespace queue
 {
-    class Storage
+    public class Storage
     {
         private int numOfGoods;
         public int NumOfGoods

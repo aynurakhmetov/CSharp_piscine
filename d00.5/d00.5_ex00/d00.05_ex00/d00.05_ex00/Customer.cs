@@ -8,10 +8,10 @@ namespace queue
         private int OrderNumOfClient { get; set; }
         public int NumOfItemsInCart { get; private set; }
 
-        public Customer(string n, int o)
+        public Customer(string name, int orderNumOfClient)
         {
-            this.Name = n;
-            this.OrderNumOfClient = o;
+            this.Name = name;
+            this.OrderNumOfClient = orderNumOfClient;
             this.NumOfItemsInCart = 0;
         }
 
