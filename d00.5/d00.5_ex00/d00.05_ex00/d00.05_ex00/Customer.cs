@@ -49,7 +49,7 @@ namespace d00._05_ex00
         public void FillCart(int maximumCapacity)
         {
             var rnd = new Random();
-            this.NumberOfItemsInCart = rnd.Next(0, maximumCapacity);
+            this.NumberOfItemsInCart = rnd.Next(1, maximumCapacity);
         }
     }
 }

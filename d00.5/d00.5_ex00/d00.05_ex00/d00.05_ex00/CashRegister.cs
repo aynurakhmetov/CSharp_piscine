@@ -4,10 +4,10 @@ namespace d00._05_ex00
 {
     public class CashRegister
     {
-        public string Title { get; private set; }
+        public int Title { get; private set; }
         public Queue<Customer> CustomersQueue { get; set; }
         
-        public CashRegister(string title)
+        public CashRegister(int title)
         {
             this.Title = title;
             this.CustomersQueue = new Queue<Customer>();

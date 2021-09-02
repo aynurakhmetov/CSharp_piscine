@@ -4,24 +4,19 @@ namespace d00._05_ex00
 {
     public class Store
     {
-        public Storage StorageOfStore { get; set; }
-        public List<CashRegister> _Cashregisters { get; set; }
+        public Storage StorageOfStore { get; private set; }
+        public List<CashRegister> CashRegistersList { get; private set; }
         
-        public Store(int capacityOfStorage, int numOfCashRegisters)
+        public Store(int capacityOfStorage, int numberOfCashRegisters)
         {
             StorageOfStore = new Storage(capacityOfStorage);
-            for (int i = 1; i <= numOfCashRegisters; i++)
+            CashRegistersList = new List<CashRegister>();
+            for (int i = 1; i <= numberOfCashRegisters; i++)
             {
-                _Cashregisters.Add(new CashRegister(i.ToString()));
+                CashRegistersList.Add(new CashRegister(i));
             }
         }
 
-        public bool IsOpen()
-        {
-            if (StorageOfStore.NumberOfItemsInStorage != 0)
-                return true;
-            else
-                return false;
-        }
+        public bool IsOpen() => !StorageOfStore.IsEmpty();
     }
 }

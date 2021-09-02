@@ -5,43 +5,43 @@ namespace d00._05_ex00
 {
     public static class CustomerExtensions
     {
-        public static CashRegister LeastNumOfCustomers(this Customer customer, List<CashRegister> cashRedisters)
+        public static CashRegister GetCashRegisterWithLeastNumberOfCustomers(this Customer customer, List<CashRegister> cashRegistersList)
         {
-            int min = Int32.MaxValue;
-            CashRegister crWithLeastNumOfCusts = new CashRegister("");
-            
-            foreach (CashRegister cr in cashRedisters)
+            var min = Int32.MaxValue;
+            var tempCashRegister = new CashRegister(0);
+
+            foreach (var cr in cashRegistersList)
             {
                 if (cr.CustomersQueue.Count < min)
                 {
                     min = cr.CustomersQueue.Count;
-                    crWithLeastNumOfCusts = cr;
+                    tempCashRegister = cr;
                 }
             }
-            
-            return crWithLeastNumOfCusts;
+
+            return tempCashRegister;
         }
         
-        public static CashRegister LeastNumOfGoods(this Customer customer, List<CashRegister> cashRedisters)
+        public static CashRegister GetCashRegisterWithLeastNumOfItems(this Customer customer, List<CashRegister> cashRegistersList)
         {
-            int min = Int32.MaxValue;
-            int allGoodsOfCR = 0;
-            CashRegister crWithLeastGoodsOfCusts = new CashRegister("");
+            var min = Int32.MaxValue;
+            var allItemsOfCashRegister = 0;
+            var tempCashRegister = new CashRegister(0);
             
-            foreach (CashRegister cr in cashRedisters)
+            foreach (var cr in cashRegistersList)
             {
-                foreach (Customer cstmr in cr.CustomersQueue)
+                foreach (var cs in cr.CustomersQueue)
                 {
-                    allGoodsOfCR += cstmr.NumberOfItemsInCart;
+                    allItemsOfCashRegister += cs.NumberOfItemsInCart;
                 }
-                if (allGoodsOfCR < min)
+                if (allItemsOfCashRegister < min)
                 {
-                    min = allGoodsOfCR; 
-                    crWithLeastGoodsOfCusts = cr;
+                    min = allItemsOfCashRegister; 
+                    tempCashRegister = cr;
                 }
             }
             
-            return crWithLeastGoodsOfCusts;
+            return tempCashRegister;
         }
     }
 }
