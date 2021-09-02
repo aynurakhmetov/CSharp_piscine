@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace queue
+namespace d00._05_ex00
 {
     public class CashRegister
     {

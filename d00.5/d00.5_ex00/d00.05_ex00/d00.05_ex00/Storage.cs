@@ -1,27 +1,15 @@
 using System;
+using System.Runtime.CompilerServices;
 
-namespace queue
+namespace d00._05_ex00
 {
     public class Storage
     {
-        private int numOfGoods;
-        public int NumOfGoods
+        public int NumberOfItemsInStorage { get; set; }
+        public Storage(int numberOfItems)
         {
-            get
-            {
-                return numOfGoods;
-            }
-            set
-            {
-                if (value >= 0)
-                    numOfGoods = value;
-            }
+            this.NumberOfItemsInStorage = numberOfItems;
         }
-        public Storage(int num)
-        {
-            this.numOfGoods = num;
-        }
-
-        public void IsEmpty() => Console.WriteLine("Storage is empty");
+        public bool IsEmpty() => this.NumberOfItemsInStorage == 0;
     }
 }

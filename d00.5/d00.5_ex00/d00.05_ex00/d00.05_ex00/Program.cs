@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using queue;
+using d00._05_ex00;
 
 Store store = new Store(40, 30);
 var customers = new List<Customer>();
@@ -19,8 +19,8 @@ while (store.IsOpen())
     foreach (var customer in customers)
     {
         customer.FillCart(7);
-        if (customer.NumOfItemsInCart <= store.StorageOfStore.NumOfGoods)
-            store.StorageOfStore.NumOfGoods -= customer.NumOfItemsInCart;
+        if (customer.NumOfItemsInCart <= store.StorageOfStore.NumberOfItemsInStorage)
+            store.StorageOfStore.NumberOfItemsInStorage -= customer.NumOfItemsInCart;
         else
         {
         }

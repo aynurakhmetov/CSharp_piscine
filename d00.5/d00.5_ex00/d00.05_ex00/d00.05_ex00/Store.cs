@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace queue
+namespace d00._05_ex00
 {
     public class Store
     {
@@ -18,7 +18,7 @@ namespace queue
 
         public bool IsOpen()
         {
-            if (StorageOfStore.NumOfGoods != 0)
+            if (StorageOfStore.NumberOfItemsInStorage != 0)
                 return true;
             else
                 return false;
