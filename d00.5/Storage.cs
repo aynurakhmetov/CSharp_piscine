@@ -10,3 +10,4 @@ namespace d00._05_ex00
         public bool IsEmpty() => this.NumberOfItemsInStorage == 0;
     }
 }
+

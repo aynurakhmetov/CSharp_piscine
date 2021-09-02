@@ -104,3 +104,4 @@ foreach (var customer in customers2)
     if (!store2.IsOpen())
         break;
 }
+
