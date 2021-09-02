@@ -17,7 +17,7 @@ namespace d00._05_ex00
 
         public override string ToString()
         {
-            return "Name of customer: " + this.Name + ", Order number of customer = " + this.OrderNumberOfCustomer;
+            return "Name of customer: " + this.Name + ", Order number of customer: " + this.OrderNumberOfCustomer;
         }
         
         public override bool Equals(object obj)
