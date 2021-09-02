@@ -4,42 +4,50 @@ namespace d00._05_ex00
 {
     public class Customer
     {
-        private string Name{ get; set; }
-        private int OrderNumOfClient { get; set; }
-        public int NumOfItemsInCart { get; private set; }
+        public string Name { get; private set; }
+        public int OrderNumberOfCustomer { get; private set; }
+        public int NumberOfItemsInCart { get; private set; }
 
-        public Customer(string name, int orderNumOfClient)
+        public Customer(string name, int orderNumberOfCustomer)
         {
             this.Name = name;
-            this.OrderNumOfClient = orderNumOfClient;
-            this.NumOfItemsInCart = 0;
+            this.OrderNumberOfCustomer = orderNumberOfCustomer;
+            this.NumberOfItemsInCart = 0;
         }
 
         public override string ToString()
         {
-            return "Name = " + this.Name + ", Order number of customer = " + this.OrderNumOfClient;
+            return "Name of customer: " + this.Name + ", Order number of customer = " + this.OrderNumberOfCustomer;
         }
         
+        public override bool Equals(object obj)
+        {
+            if(obj == null || obj.GetType() != this.GetType())
+                return false;
+
+            Customer cstmr = (Castomer)obj;
+
+            return this.Name == cstmr.Name && this.OrderNumberOfCustomer == cstmr.OrderNumberOfCustomer;
+        }
+
+        public override int GetHashCode()
+        {
+            return this.OrderNumberOfCustomer;
+        }
         public static bool operator==(Customer c1, Customer c2)
         {
-            if (c1.Name == c2.Name && c1.OrderNumOfClient == c2.OrderNumOfClient)
-                return true;
-            else
-                return false;
+            return c1.Name == c2.Name && c1.OrderNumberOfCustomer == c2.OrderNumberOfCustomer;
         }
         
         public static bool operator!=(Customer c1, Customer c2)
         {
-            if (c1.Name == c2.Name && c1.OrderNumOfClient == c2.OrderNumOfClient)
-                return false;
-            else
-                return true;
+            return c1.Name != c2.Name || c1.OrderNumberOfCustomer != c2.OrderNumberOfCustomer;
         }
 
-        public void FillCart(int max)
+        public void FillCart(int maximumCapacity)
         {
-            Random rnd = new Random();
-            this.NumOfItemsInCart = rnd.Next(0, max);
+            var rnd = new Random();
+            this.NumberOfItemsInCart = rnd.Next(0, maximumCapacity);
         }
     }
 }

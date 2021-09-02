@@ -32,7 +32,7 @@ namespace d00._05_ex00
             {
                 foreach (Customer cstmr in cr.customers)
                 {
-                    allGoodsOfCR += cstmr.NumOfItemsInCart;
+                    allGoodsOfCR += cstmr.NumberOfItemsInCart;
                 }
                 if (allGoodsOfCR < min)
                 {

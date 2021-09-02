@@ -19,8 +19,8 @@ while (store.IsOpen())
     foreach (var customer in customers)
     {
         customer.FillCart(7);
-        if (customer.NumOfItemsInCart <= store.StorageOfStore.NumberOfItemsInStorage)
-            store.StorageOfStore.NumberOfItemsInStorage -= customer.NumOfItemsInCart;
+        if (customer.NumberOfItemsInCart <= store.StorageOfStore.NumberOfItemsInStorage)
+            store.StorageOfStore.NumberOfItemsInStorage -= customer.NumberOfItemsInCart;
         else
         {
         }
