@@ -12,9 +12,9 @@ namespace d00._05_ex00
             
             foreach (CashRegister cr in cashRedisters)
             {
-                if (cr.customers.Count < min)
+                if (cr.CustomersQueue.Count < min)
                 {
-                    min = cr.customers.Count;
+                    min = cr.CustomersQueue.Count;
                     crWithLeastNumOfCusts = cr;
                 }
             }
@@ -30,7 +30,7 @@ namespace d00._05_ex00
             
             foreach (CashRegister cr in cashRedisters)
             {
-                foreach (Customer cstmr in cr.customers)
+                foreach (Customer cstmr in cr.CustomersQueue)
                 {
                     allGoodsOfCR += cstmr.NumberOfItemsInCart;
                 }

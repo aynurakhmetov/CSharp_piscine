@@ -24,6 +24,6 @@ while (store.IsOpen())
         else
         {
         }
-        customer.LeastNumOfCustomers(store._Cashregisters).customers.Enqueue(customer);
+        customer.LeastNumOfCustomers(store._Cashregisters).CustomersQueue.Enqueue(customer);
     }
 }

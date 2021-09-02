@@ -25,15 +25,17 @@ namespace d00._05_ex00
             if(obj == null || obj.GetType() != this.GetType())
                 return false;
 
-            Customer cstmr = (Castomer)obj;
+            var otherCustomer = (Customer)obj;
 
-            return this.Name == cstmr.Name && this.OrderNumberOfCustomer == cstmr.OrderNumberOfCustomer;
+            return this.Name == otherCustomer.Name &&
+                   this.OrderNumberOfCustomer == otherCustomer.OrderNumberOfCustomer;
         }
 
         public override int GetHashCode()
         {
-            return this.OrderNumberOfCustomer;
+            return this.OrderNumberOfCustomer.GetHashCode();
         }
+        
         public static bool operator==(Customer c1, Customer c2)
         {
             return c1.Name == c2.Name && c1.OrderNumberOfCustomer == c2.OrderNumberOfCustomer;
