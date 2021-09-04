@@ -1,30 +1,36 @@
 using System;
+using System.Collections.Generic;
 
 namespace d01_ex01
 {
-    // Чтобы достигать целей, необходимо ставить сроки. 
-    // Итак, у задачи должны быть: заголовок (текст), описание (текст), срок выполнения (дата). 
+    class Task
+    {
+        public string Title{ get; private set; }
+        public string Summary { get; private set; }
+        public TaskType Type { get; private set; }
+        public TaskPriority Priority { get; private set; }
+        public DateTime DueDate { get; private set; }
+        public List <Event> HistoryOfEvents { get; private set; }
 
-    // Метод 1. Создание задачи
-    // > add 
-    // > Введите заголовок
-    // > {title} 
-    // > Введите описание
-    // > {summary} 
-    // > Введите срок
-    // > {dueDate} 
-    // > Введите тип
-    // > {type} 
-    // > Установите приоритет
-    // > {priority} 
+        public Task()
+        {
+        }
 
-    // Обратите внимание, статус задачи не задается вводом: задача всегда должна создаваться в статусе Новая.
+        public void SetNewState(Event newEvent)
+        {
+            if (HistoryOfEvents[HistoryOfEvents.Count - 1].ActualState == TaskState.New)
+            {
+                HistoryOfEvents.Add(newEvent);
+            }
+            else
+            {
+                Console.WriteLine("Ошибка изменения состояния. У это задачи конечное состояние, которое не может быть изменено");
+            }
+        }
 
-    // Если параметр обязательный, 
-    // нужно проверять его на входе. 
-    // Если не обязательный, в классе соответствующее ему поле должно быть nullable. 
-    // При этом string - ссылочный тип, и уже по умолчанию nullable. 
-    // DateTime и enum - типы значений, и nullable им нужно явно указать.
-
-
+        public TaskState GetActualState()
+        {
+            return HistoryOfEvents[HistoryOfEvents.Count - 1].ActualState;
+        }
+    }
 }
