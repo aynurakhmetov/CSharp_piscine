@@ -1,5 +1,3 @@
-using System;
-
 namespace ex00
 {
     struct ExchangeRate
