@@ -12,7 +12,6 @@ namespace d01_ex01
         public TaskPriority Priority { get; private set; }
         public DateTime DueDate { get; private set; }
         public List <Event> HistoryOfEvents { get; private set; }
-        public List<Task> tasks;
 
         public Task()
         {
@@ -38,7 +37,7 @@ namespace d01_ex01
             }
             else
             {
-                Console.WriteLine("Ошибка изменения состояния. У это задачи конечное состояние, которое не может быть изменено");
+                Console.WriteLine("Ошибка изменения состояния. У этой задачи конечное состояние, которое не может быть изменено");
                 return 0;
             }
         }
@@ -51,12 +50,20 @@ namespace d01_ex01
         public override string ToString()
         {
             string answer;
-            answer = $"{this.Title}\n[{this.Type.ToString("g")}] [{HistoryOfEvents.Last().ActualState}]\n" +
+            answer = $"- {this.Title}\n[{this.Type.ToString("g")}] [{HistoryOfEvents.Last().ActualState}]\n" +
                      $"Priority: {this.Priority.ToString("g")}";
             if (this.DueDate != DateTime.MinValue)
+            {
                 answer += $", Due till {this.DueDate}\n";
+            }
+            else
+            {
+                answer += "\n";
+            }
             if (this.Summary != null)
+            {
                 answer += $"{this.Summary}";
+            }
             return answer;
         }
 

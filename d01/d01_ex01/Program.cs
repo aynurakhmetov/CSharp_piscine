@@ -34,7 +34,8 @@ void TaskCreate()
     }
     Console.WriteLine("Введите срок в формате mm/dd/yyyy"); // not required
     dueDate = Console.ReadLine();
-    if (dueDate != "" || dueDate != "-")
+    // Можно добавить проверку вводимой даты на корректность
+    if (dueDate != "" && dueDate != "-" && dueDate != null)
     {
         dueDateFromString = DateTime.Parse(dueDate, cultureInfo);
     }
@@ -43,7 +44,7 @@ void TaskCreate()
         dueDateFromString = DateTime.MinValue;
     }
     Console.WriteLine("Введите тип: work, study, personal"); // required
-    while ((type = Console.ReadLine()) == "" && type != "work" && type != "study" && type != "personal")
+    while ((type = Console.ReadLine()) == "" || type != "work" && type != "study" && type != "personal")
     {
         Console.WriteLine("Тип является обязательным / Вы ввели некоректный тип или не ввели его совсем");
         Console.WriteLine("Введите тип: work, study, personal");
@@ -92,7 +93,7 @@ void TaskCreate()
             break;
     }
     newTask.CreateNewTask(title, summary, dueDateFromString, typeFromString, priorityFromString);
-    Console.WriteLine($"/n{newTask.ToString()}");
+    Console.WriteLine($"\n{newTask.ToString()}\n");
     tasks.Add(newTask);
 }
 
@@ -127,8 +128,10 @@ void TaskDone()
     }
     else
     {
-        if (tasks[index].TaskDone() != 0);
+        if (tasks[index].TaskDone() != 0)
+        {
             Console.WriteLine($"Задача [{tasks[index].Title}] выполнена!");
+        }
     }
 }
 
@@ -155,8 +158,10 @@ void TaskWontDo()
     }
     else
     {
-        if (tasks[index].TaskWontDo() != 0);
-        Console.WriteLine($"Задача [{tasks[index].Title}] более не актуальна!");
+        if (tasks[index].TaskWontDo() != 0)
+        {
+            Console.WriteLine($"Задача [{tasks[index].Title}] более не актуальна!");
+        }
     }    
 }
 

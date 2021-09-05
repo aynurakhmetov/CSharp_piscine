@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace d01_ex01
 {
     record Event
