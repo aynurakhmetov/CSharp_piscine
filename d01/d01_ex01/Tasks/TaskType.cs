@@ -4,7 +4,7 @@ namespace d01_ex01
 {
     public enum TaskType
     {
-        Work,
+        Work = 1,
         Study,
         Personal
     }
