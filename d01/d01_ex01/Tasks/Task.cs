@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace d01_ex01
 {
@@ -16,7 +17,7 @@ namespace d01_ex01
         {
         }
 
-        public void SetNewState(Event newEvent)
+        private void SetNewState(Event newEvent)
         {
             if (HistoryOfEvents[HistoryOfEvents.Count - 1].ActualState == TaskState.New)
             {
@@ -31,6 +32,12 @@ namespace d01_ex01
         public TaskState GetActualState()
         {
             return HistoryOfEvents[HistoryOfEvents.Count - 1].ActualState;
+        }
+
+        public override string ToString()
+        {
+            return $"{this.Title}\n[{this.Type}] [{HistoryOfEvents.Last().ActualState}]\n" +
+                   $"Priority: {this.Priority}, Due till {this.DueDate}\n{this.Summary} ";
         }
     }
 }
