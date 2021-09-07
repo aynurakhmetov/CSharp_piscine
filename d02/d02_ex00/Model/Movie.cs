@@ -3,23 +3,50 @@ using System.Collections.Generic;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.IO;
-using d02_ex00;
+using System.Linq;
 
 namespace d02_ex00
 {
     class Movies : ISearchable
     {
         private InfoMovieJson infoMovie;
-        private List<Movie> movies;
-        const string fileNameMovieJson = "book_reviews.json";
+        public List<Movie> movies;
+        const string fileNameMovieJson = "movie_reviews.json";
+        public IEnumerable<Movie> selectedMovies;
+        public int countSeletedMovies;
 
         public Movies()
         {
             string jsonStringMovie = File.ReadAllText(fileNameMovieJson);
             InfoMovieJson infoMovie = JsonSerializer.Deserialize<InfoMovieJson>(jsonStringMovie);
+            movies = new List<Movie>();
+            
+            for (int i = 0; i < infoMovie.NumResults; i++)
+            {
+                Movie tempMovie = new Movie();
+                tempMovie.Title = infoMovie.Results[i].Title.ToUpper();
+                tempMovie.Raiting = infoMovie.Results[i].MpaaRating;
+                tempMovie.SummaryShort = infoMovie.Results[i].SummaryShort;
+                tempMovie.IsCriticsPick = infoMovie.Results[i].CriticsPick;
+                tempMovie.Url = infoMovie.Results[i].Link.Url;
+                movies.Add(tempMovie);
+                tempMovie = null;
+            }
+        }
+        
+        public void Search(string title)
+        {
+            this.countSeletedMovies = 0;
+
+            this.selectedMovies = from movie in movies 
+                                  where movie.Title.ToLower().IndexOf(title.ToLower()) != -1
+                                  select movie;
+            foreach (var m in this.selectedMovies)
+            {
+                this.countSeletedMovies++;
+            }
         }
     }
-    
     
     public class Movie
     {
@@ -28,6 +55,22 @@ namespace d02_ex00
         public int IsCriticsPick { get; set; }
         public string SummaryShort { get; set; }
         public string Url { get; set; }
+        
+        public override string ToString()
+        {
+            string answer;
+            bool isCriticsPickBool;
+            if (this.IsCriticsPick == 0)
+                isCriticsPickBool = false;
+            else
+                isCriticsPickBool = true;
+
+            answer = $"{this.Title} ";
+            answer += isCriticsPickBool ? "[NYT critic’s pick]" : "";
+            answer += $"\n{this.SummaryShort}\n" + 
+                      $"{this.Url}\n";
+            return answer;
+        }
     }
     
     public class InfoMovieJson

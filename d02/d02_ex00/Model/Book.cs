@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.IO;
+using System.Linq;
 
 namespace d02_ex00
 {
@@ -11,6 +12,8 @@ namespace d02_ex00
         private InfoBookJson infoBook;
         private List<Book> books;
         const string fileNameBookJson = "book_reviews.json";
+        public IEnumerable<Book> selectedBooks;
+        public int countSeletedBooks;
 
         public Books()
         {
@@ -19,12 +22,29 @@ namespace d02_ex00
             books = new List<Book>();
             for (int i = 0; i < infoBook.NumResults; i++)
             {
-                books[i].Title = infoBook.Results[i].BookDetails[0].Title;
-                books[i].Author = infoBook.Results[i].BookDetails[0].Author;
-                books[i].SummaryShort = infoBook.Results[i].BookDetails[0].Description;
-                books[i].Rank = infoBook.Results[i].Rank;
-                books[i].ListName = infoBook.Results[i].ListName;
-                books[i].Url = infoBook.Results[i].AmazonProductUrl;
+                Book tempBook = new Book();
+                tempBook.Title = infoBook.Results[i].BookDetails[0].Title;
+                tempBook.Author = infoBook.Results[i].BookDetails[0].Author;
+                tempBook.SummaryShort = infoBook.Results[i].BookDetails[0].Description;
+                tempBook.Rank = infoBook.Results[i].Rank;
+                tempBook.ListName = infoBook.Results[i].ListName;
+                tempBook.Url = infoBook.Results[i].AmazonProductUrl;
+                books.Add(tempBook);
+                tempBook = null;
+            }
+        }
+
+        public void Search(string title)
+        {
+            countSeletedBooks = 0;
+            
+            selectedBooks = from book in books
+                where book.Title.ToLower().Contains(title.ToLower())
+                select book;
+
+            foreach (var m in selectedBooks)
+            {
+                countSeletedBooks++;
             }
         }
     }
@@ -37,6 +57,16 @@ namespace d02_ex00
         public int Rank { get; set; }
         public string ListName { get; set; }
         public string Url { get; set; }
+
+        public override string ToString()
+        {
+            string answer;
+
+            answer = $"{this.Title} by {this.Author} [{this.Rank} on NYT’s {this.ListName}]\n" +
+                     $"{this.SummaryShort}\n" +
+                     $"{this.Url}\n";
+            return answer;
+        }
     }
     public class InfoBookJson
     {
