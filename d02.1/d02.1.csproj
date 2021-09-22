@@ -6,4 +6,8 @@
     <RootNamespace>d02._1</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="YamlDotNet.NetCore" Version="1.0.0" />
+  </ItemGroup>
+
 </Project>
