@@ -30,8 +30,3 @@ foreach(var movie in movies.selectedMovies)
 {
     Console.Write($"- {movie.ToString()}");
 }
-
-    
-
-
-

@@ -23,6 +23,14 @@ namespace d02._1
                 }
             }
         }
+        public void Display()
+        {
+            Console.WriteLine("Configuration");
+            foreach (DictionaryEntry param in Params)
+            {
+                Console.WriteLine($"{param.Key}: {param.Value}");
+            }
+        }
         
     }
 }

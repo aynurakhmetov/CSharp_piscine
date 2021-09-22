@@ -13,7 +13,14 @@ if (args.Length != 4)
 var jsonSource = new JsonSource(args[0], args[1]);
 var yamlSource = new YamlSource(args[2], args[3]);
 var configSource = new List<IConfigurationSource>();
-configSource.Add(jsonSource);
-configSource.Add(yamlSource);
 
+if (jsonSource.Params != null)
+{
+    configSource.Add(jsonSource);
+}
+if (yamlSource.Params != null)
+{
+    configSource.Add(yamlSource);
+}
 var config = new Configuration(configSource);
+config.Display();

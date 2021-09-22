@@ -9,6 +9,11 @@ namespace d02._1
         public string Path { get; set; }
         public string Priority { get; set;}
         public Hashtable Params { get; set; }
+
+        public void Deserialize()
+        {
+            
+        }
         public YamlSource(string path, string priotity)
         {
             
