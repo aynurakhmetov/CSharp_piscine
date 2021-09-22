@@ -13,6 +13,7 @@ namespace d02._1
         public Configuration(List<IConfigurationSource> configSource)
         {
             this.ConfigurationSource = configSource;
+            this.Params = new Hashtable();
             var selectedConfig = ConfigurationSource.OrderByDescending(t => t.Priority);
             foreach (var config in selectedConfig)
             {
@@ -31,6 +32,5 @@ namespace d02._1
                 Console.WriteLine($"{param.Key}: {param.Value}");
             }
         }
-        
     }
 }
