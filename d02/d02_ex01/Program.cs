@@ -22,5 +22,3 @@ if (jsonSource.Params != null && yamlSource.Params != null)
     configuration.Add(yamlSource);
     configuration.Display();
 }
-
-
