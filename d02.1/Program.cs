@@ -42,7 +42,6 @@ if (envSource.Params != null)
     configSource.Add(envSource);
 }
 
-
 if (configSource.Count != 0)
 {
     var config = new Configuration(configSource);
