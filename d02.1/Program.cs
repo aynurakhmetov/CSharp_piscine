@@ -24,12 +24,34 @@ if (yamlSource.Params != null)
 {
     configSource.Add(yamlSource);
 }
+
 if (configSource.Count != 0)
 {
     var config = new Configuration(configSource);
     config.Display();
 }
+else
+{
+    return;
+}
 
+var envSource = new EnvSource();
+envSource.Deserialize();
+if (envSource.Params != null)
+{
+    configSource.Add(envSource);
+}
+
+
+if (configSource.Count != 0)
+{
+    var config = new Configuration(configSource);
+    config.Display();
+}
+else
+{
+    return;
+}
 
 // dotnet run "config.json" 1 "config.yml" 2
 // dotnet run "config.json" 1 "config.yml" 0
