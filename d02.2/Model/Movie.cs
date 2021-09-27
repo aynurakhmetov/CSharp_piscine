@@ -6,19 +6,19 @@ using System.Linq;
 
 namespace d02._2
 {
-    class Movies : ISearchable
+    class Movies
     {
         private InfoMovieJson infoMovie;
-        public List<Movie> movies;
+        public List<ISearchable> movies;
         const string fileNameMovieJson = "movie_reviews.json";
-        public IEnumerable<Movie> selectedMovies;
+        public IEnumerable<ISearchable> selectedMovies;
         public int countSeletedMovies;
 
         public Movies()
         {
             string jsonStringMovie = File.ReadAllText(fileNameMovieJson);
-            InfoMovieJson infoMovie = JsonSerializer.Deserialize<InfoMovieJson>(jsonStringMovie);
-            movies = new List<Movie>();
+            infoMovie = JsonSerializer.Deserialize<InfoMovieJson>(jsonStringMovie);
+            movies = new List<ISearchable>();
             
             for (int i = 0; i < infoMovie.NumResults; i++)
             {
@@ -32,28 +32,16 @@ namespace d02._2
                 tempMovie = null;
             }
         }
-        
-        public void Search(string title)
-        {
-            this.countSeletedMovies = 0;
-
-            this.selectedMovies = from movie in movies 
-                                  where movie.Title.ToLower().IndexOf(title.ToLower()) != -1
-                                  select movie;
-            foreach (var m in this.selectedMovies)
-            {
-                this.countSeletedMovies++;
-            }
-        }
     }
     
-    public class Movie
+    public class Movie : ISearchable
     {
         public string Title { get; set; }
         public string Raiting { get; set; }
         public int IsCriticsPick { get; set; }
         public string SummaryShort { get; set; }
         public string Url { get; set; }
+        public string Type { get; set; } = "movie";
         
         public override string ToString()
         {

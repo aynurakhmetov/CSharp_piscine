@@ -7,19 +7,19 @@ using System.Linq;
 
 namespace d02._2
 {
-    class Books : ISearchable
+    class Books
     {
         private InfoBookJson infoBook;
-        private List<Book> books;
+        public List<ISearchable> books;
         const string fileNameBookJson = "book_reviews.json";
-        public IEnumerable<Book> selectedBooks;
+        public IEnumerable<ISearchable> selectedBooks;
         public int countSeletedBooks;
 
         public Books()
         {
             string jsonStringBook = File.ReadAllText(fileNameBookJson);
-            InfoBookJson infoBook = JsonSerializer.Deserialize<InfoBookJson>(jsonStringBook);
-            books = new List<Book>();
+            infoBook = JsonSerializer.Deserialize<InfoBookJson>(jsonStringBook);
+            books = new List<ISearchable>();
             for (int i = 0; i < infoBook.NumResults; i++)
             {
                 Book tempBook = new Book();
@@ -33,23 +33,9 @@ namespace d02._2
                 tempBook = null;
             }
         }
-
-        public void Search(string title)
-        {
-            countSeletedBooks = 0;
-            
-            selectedBooks = from book in books
-                where book.Title.ToLower().Contains(title.ToLower())
-                select book;
-
-            foreach (var m in selectedBooks)
-            {
-                countSeletedBooks++;
-            }
-        }
     }
     
-    public class Book
+    public class Book : ISearchable
     {
         public string Title { get; set; }
         public string Author { get; set; }
@@ -57,6 +43,7 @@ namespace d02._2
         public int Rank { get; set; }
         public string ListName { get; set; }
         public string Url { get; set; }
+        public string Type { get; set; } = "book";
 
         public override string ToString()
         {

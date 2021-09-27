@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using d02._2;
+using Enumerable = d02._2.Enumerable;
 
 var books = new Books();
 var movies = new Movies();
@@ -8,8 +12,11 @@ string searchTitle;
 Console.WriteLine("> Input search text:");
 searchTitle = Console.ReadLine();
 
-books.Search(searchTitle);
-movies.Search(searchTitle);
+books.selectedBooks = books.books.Search(searchTitle);
+books.countSeletedBooks = books.selectedBooks.Count();
+
+movies.selectedMovies = movies.movies.Search(searchTitle);
+movies.countSeletedMovies = movies.selectedMovies.Count();
 
 if (books.countSeletedBooks + movies.countSeletedMovies == 0)
 {
