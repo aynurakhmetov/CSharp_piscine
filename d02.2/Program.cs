@@ -1,12 +1,18 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using d02._2;
-using Enumerable = d02._2.Enumerable;
+
 
 var books = new Books();
 var movies = new Movies();
+
+if (args.Length == 1 && args[0] == "best")
+{
+    books.Best();
+    movies.Best();
+    return;
+}
+
 string searchTitle;
 
 Console.WriteLine("> Input search text:");

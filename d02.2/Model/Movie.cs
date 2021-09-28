@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -9,7 +10,7 @@ namespace d02._2
     class Movies
     {
         private InfoMovieJson infoMovie;
-        public List<ISearchable> movies;
+        public List<Movie> movies;
         const string fileNameMovieJson = "movie_reviews.json";
         public IEnumerable<ISearchable> selectedMovies;
         public int countSeletedMovies;
@@ -18,7 +19,7 @@ namespace d02._2
         {
             string jsonStringMovie = File.ReadAllText(fileNameMovieJson);
             infoMovie = JsonSerializer.Deserialize<InfoMovieJson>(jsonStringMovie);
-            movies = new List<ISearchable>();
+            movies = new List<Movie>();
             
             for (int i = 0; i < infoMovie.NumResults; i++)
             {
@@ -31,6 +32,13 @@ namespace d02._2
                 movies.Add(tempMovie);
                 tempMovie = null;
             }
+        }
+        
+        public void Best()
+        {
+            var bestMovie = movies.First(t => t.IsCriticsPick == 1);
+            Console.WriteLine("Best in movie reviews:");
+            Console.WriteLine($"- {bestMovie.ToString()}");
         }
     }
     

@@ -10,7 +10,7 @@ namespace d02._2
     class Books
     {
         private InfoBookJson infoBook;
-        public List<ISearchable> books;
+        public List<Book> books;
         const string fileNameBookJson = "book_reviews.json";
         public IEnumerable<ISearchable> selectedBooks;
         public int countSeletedBooks;
@@ -19,7 +19,7 @@ namespace d02._2
         {
             string jsonStringBook = File.ReadAllText(fileNameBookJson);
             infoBook = JsonSerializer.Deserialize<InfoBookJson>(jsonStringBook);
-            books = new List<ISearchable>();
+            books = new List<Book>();
             for (int i = 0; i < infoBook.NumResults; i++)
             {
                 Book tempBook = new Book();
@@ -32,6 +32,13 @@ namespace d02._2
                 books.Add(tempBook);
                 tempBook = null;
             }
+        }
+
+        public void Best()
+        {
+            var bestBook = books.First(t => t.Rank == 1);
+            Console.WriteLine("Best in books:");
+            Console.WriteLine($"- {bestBook.ToString()}");
         }
     }
     
