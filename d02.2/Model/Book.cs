@@ -11,12 +11,14 @@ namespace d02._2
     {
         private InfoBookJson infoBook;
         public List<Book> books;
-        const string fileNameBookJson = "book_reviews.json";
+        public string fileNameBookJson;
         public IEnumerable<ISearchable> selectedBooks;
         public int countSeletedBooks;
 
         public Books()
         {
+            var config = new Startup();
+            fileNameBookJson = config.AppConfiguration.GetSection("PathToBookReviews").Value;
             string jsonStringBook = File.ReadAllText(fileNameBookJson);
             infoBook = JsonSerializer.Deserialize<InfoBookJson>(jsonStringBook);
             books = new List<Book>();

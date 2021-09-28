@@ -11,12 +11,14 @@ namespace d02._2
     {
         private InfoMovieJson infoMovie;
         public List<Movie> movies;
-        const string fileNameMovieJson = "movie_reviews.json";
+        public string fileNameMovieJson;
         public IEnumerable<ISearchable> selectedMovies;
         public int countSeletedMovies;
 
         public Movies()
         {
+            var config = new Startup();
+            fileNameMovieJson = config.AppConfiguration.GetSection("PathToMovieReviews").Value;
             string jsonStringMovie = File.ReadAllText(fileNameMovieJson);
             infoMovie = JsonSerializer.Deserialize<InfoMovieJson>(jsonStringMovie);
             movies = new List<Movie>();
