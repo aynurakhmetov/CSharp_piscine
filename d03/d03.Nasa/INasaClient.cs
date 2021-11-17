@@ -1,7 +1,7 @@
-namespace d03.Nasa
+namespace d03.Nasa.Lib
 {
     interface INasaClient<in TIn, out TOut>
     {
-        async TOut GetAsync(TIn input);
+        TOut GetAsync(TIn input);
     }
 }

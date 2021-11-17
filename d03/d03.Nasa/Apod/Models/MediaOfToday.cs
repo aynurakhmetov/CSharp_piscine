@@ -1,11 +1,11 @@
-namespace d03.Host
+namespace d03.Nasa.Lib
 {
-    class MediaOfTuday
+    public class MediaOfToday
     {
-        string сopyright;
-        DataTime data;
-        strinf explanation;
-        string title;
-        string url;
+        public string сopyright;
+        public System.DateTime data;
+        public string explanation;
+        public string title;
+        public string url;
     }
 }
