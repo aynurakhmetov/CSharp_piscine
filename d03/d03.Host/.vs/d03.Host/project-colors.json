@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Прочие файлы",
+      "ColorIndex": -1
+    },
+    "b8cdee76-a7d4-4f10-91db-0ca5a4246ac8": {
+      "ProjectGuid": "b8cdee76-a7d4-4f10-91db-0ca5a4246ac8",
+      "DisplayName": "d03.Host",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
