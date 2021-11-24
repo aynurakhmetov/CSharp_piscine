@@ -1,5 +1,8 @@
 using System;
+using System.Net;
 using System.Net.Http;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace d03.Nasa.Lib
@@ -16,21 +19,20 @@ namespace d03.Nasa.Lib
         {
             this.apiKey = apiKey;
         }
-        protected async void HttpGetAsync<T>(string url)
+        protected async Task<T> HttpGetAsync<T>(string url)
         {
-            try	
+            HttpResponseMessage response = await client.GetAsync(url);
+            response.EnsureSuccessStatusCode();
+            var responseBody = await response.Content.ReadAsStringAsync();
+            if (response.StatusCode == HttpStatusCode.OK)
             {
-                HttpResponseMessage response = await client.GetAsync(url);
-                response.EnsureSuccessStatusCode();
-                string responseBody = await response.Content.ReadAsStringAsync();
-                // Above three lines can be replaced with new helper method below
-                // string responseBody = await client.GetStringAsync(uri);
                 Console.WriteLine(responseBody);
+                return JsonSerializer.Deserialize<T>(responseBody);
             }
-            catch(HttpRequestException e)
+            else
             {
-                Console.WriteLine("\nException Caught!");	
-                Console.WriteLine("Message :{0} ",e.Message);
+                Console.WriteLine(response.StatusCode);
+                return JsonSerializer.Deserialize<T>("what need");
             }
             // Реализацию HTTP GET запроса
             // десериализацию ответа в нужный объект: HttpGetAsync<T>(string url)
@@ -43,7 +45,5 @@ namespace d03.Nasa.Lib
             // Так как HTTP-запросы это I/O операция, для предотвращения блокировки программы на время выполнения запроса к удаленному ресурсу (серверу API), методы классов, содержащие эти запросы, должны быть асинхронными. 
             // В этом вам помогут ключевые слова async/await. 
         }
-        
-
     }
 }
