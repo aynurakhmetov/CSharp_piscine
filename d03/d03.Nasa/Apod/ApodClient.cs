@@ -1,21 +1,28 @@
+using System.Dynamic;
 using System.Threading.Tasks;
 
 namespace d03.Nasa.Lib
 {
     public class ApodClient : ApiClientBase, INasaClient<int, Task<MediaOfToday[]>>
     {
+        public int ResultCount { get; private set;}
+        private string _url = "https://api.nasa.gov/planetary/apod?api_key=";
         private ApodClient(string apiKey) : base(apiKey)
         {
         }
         
         public Task<MediaOfToday[]> GetAsync(int input)
         {
-            var media = new MediaOfToday[input];
-            for (int i = 0; i < input; i++)
+            ResultCount = input;
+            var media = new MediaOfToday[ResultCount];
+            for (int i = 0; i < ResultCount; i++)
             {
-                //media[0].сopyright = HttpGetAsync<>("https://api.nasa.gov/planetary/apod?api_key=apiKey&couny=5");
+                media[i] = this.HttpGetAsync<MediaOfToday>(this._url + this.apiKey).Result;
             }
-            throw new System.NotImplementedException(); 
+            //throw new System.NotImplementedException();
+            return media;
         }
     }
 }
+
+// Свойства - лучшая практика
