@@ -23,18 +23,16 @@ namespace d03.Host
             var apiKey = configuration["ApiKey"];
             Console.WriteLine(apiKey);
 
-            HttpClient client = new HttpClient();
-            HttpResponseMessage response = await client.GetAsync("https://api.nasa.gov/planetary/apod?api_key=" + apiKey);
-            response.EnsureSuccessStatusCode();
-            var responseBody = await response.Content.ReadAsStringAsync();
-            if (response.StatusCode == HttpStatusCode.OK)
+            // Get command from command line as arguments
+            if (args.Length == 2 && args[0] == "apod" && Int32.Parse(args[1]) > 0)
             {
-                Console.WriteLine(responseBody);
+                
             }
-            Console.WriteLine(response.StatusCode);
-
-
-            
+            else
+            {
+                Console.WriteLine("Incorrect input arguments");
+                return;
+            }
 
         }
     }
