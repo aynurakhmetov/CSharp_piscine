@@ -11,13 +11,13 @@ namespace d03.Nasa.Lib
         {
         }
         
-        public Task<MediaOfToday[]> GetAsync(int input)
+        public async Task<MediaOfToday[]> GetAsync(int input)
         {
             ResultCount = input;
             var media = new MediaOfToday[ResultCount];
             for (int i = 0; i < ResultCount; i++)
             {
-                media[i] = this.HttpGetAsync<MediaOfToday>(this._url + this.apiKey).Result;
+                media[i] = await this.HttpGetAsync<MediaOfToday>(this._url + this.apiKey);
             }
             //throw new System.NotImplementedException();
             return media;
@@ -25,4 +25,4 @@ namespace d03.Nasa.Lib
     }
 }
 
-// Свойства - лучшая практика
+// Свойства и поля - лучшая практика разобраться
