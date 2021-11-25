@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "d03.Nasa/1.0.0": {
+        "runtime": {
+          "d03.Nasa.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "d03.Nasa/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
