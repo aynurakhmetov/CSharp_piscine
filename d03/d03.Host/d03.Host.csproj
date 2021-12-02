@@ -15,4 +15,10 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="d03.Nasa, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\d03.Nasa\obj\Debug\net5.0\d03.Nasa.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

@@ -2,6 +2,7 @@
 using System.IO;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
+using d03.Nasa.Lib;
 
 using System.Net;
 using System.Net.Http;
@@ -26,7 +27,10 @@ namespace d03.Host
             // Get command from command line as arguments
             if (args.Length == 2 && args[0] == "apod" && Int32.Parse(args[1]) > 0)
             {
-                
+                var resultCount = Int32.Parse(args[1]);
+                var apodClient = new ApodClient(apiKey);
+                await apodClient.GetAsync(resultCount);
+                apodClient.DisplayMedia();
             }
             else
             {
