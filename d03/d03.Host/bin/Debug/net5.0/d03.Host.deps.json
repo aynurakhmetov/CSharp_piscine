@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v5.0": {
       "d03.Host/1.0.0": {
         "dependencies": {
-          "Microsoft.Extensions.Configuration.Json": "6.0.0"
+          "Microsoft.Extensions.Configuration.Json": "6.0.0",
+          "d03.Nasa": "1.0.0.0"
         },
         "runtime": {
           "d03.Host.dll": {}
@@ -140,6 +141,14 @@
             "fileVersion": "6.0.21.52210"
           }
         }
+      },
+      "d03.Nasa/1.0.0.0": {
+        "runtime": {
+          "d03.Nasa.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -225,6 +234,11 @@
       "sha512": "sha512-zaJsHfESQvJ11vbXnNlkrR46IaMULk/gHxYsJphzSF+07kTjPHv+Oc14w6QEOfo3Q4hqLJgStUaYB9DBl0TmWg==",
       "path": "system.text.json/6.0.0",
       "hashPath": "system.text.json.6.0.0.nupkg.sha512"
+    },
+    "d03.Nasa/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

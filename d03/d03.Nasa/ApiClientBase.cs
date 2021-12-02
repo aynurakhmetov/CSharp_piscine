@@ -22,25 +22,33 @@ namespace d03.Nasa.Lib
         protected async Task<T> HttpGetAsync<T>(string url)
         {
             HttpResponseMessage response = await client.GetAsync(url);
-            response.EnsureSuccessStatusCode();
+            //response.EnsureSuccessStatusCode();
             var responseBody = await response.Content.ReadAsStringAsync();
             try
             {
                 if (response.StatusCode == HttpStatusCode.OK)
                 {
-                    Console.WriteLine(responseBody);
+                    //Console.WriteLine(responseBody);
+                    return JsonSerializer.Deserialize<T>(responseBody);
+                }
+                else
+                {
+                    Console.WriteLine($"2GET \"{url}\" returned {response.StatusCode.ToString()}:");
+                    Console.WriteLine($"0:{response.ReasonPhrase}  1:{response.TrailingHeaders} 2:{response.Content.Headers}");
                     return JsonSerializer.Deserialize<T>(responseBody);
                 }
             }
             catch(WebException e)
             {
+                Console.WriteLine($"0GET \"{url}\" returned {response.StatusCode.ToString()}");
                 Console.WriteLine(e.Status);
             }
             catch (Exception e)
             {
+                Console.WriteLine($"1GET \"{url}\" returned {response.StatusCode.ToString()}");
                 Console.WriteLine(e.Message);
             }
-            return JsonSerializer.Deserialize<T>(response.StatusCode.ToString());
+            return JsonSerializer.Deserialize<T>(responseBody);
         }
     }
 }
