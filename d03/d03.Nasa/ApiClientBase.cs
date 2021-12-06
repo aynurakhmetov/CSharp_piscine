@@ -28,7 +28,7 @@ namespace d03.Nasa.Lib
             {
                 if (response.StatusCode == HttpStatusCode.OK)
                 {
-                    //Console.WriteLine(responseBody);
+                    Console.WriteLine(responseBody);
                     return JsonSerializer.Deserialize<T>(responseBody);
                 }
                 else

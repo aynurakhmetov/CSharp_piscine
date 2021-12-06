@@ -30,8 +30,9 @@ namespace d03.Host
             {
                 var resultCount = Int32.Parse(args[1]);
                 var apodClient = new ApodClient(apiKey);
-                await apodClient.GetAsync(resultCount);
+                var mediaOfToday = await apodClient.GetAsync(resultCount);
                 apodClient.DisplayMedia();
+                // вывод данных здесь надо реализовать
             }
             else
             {
