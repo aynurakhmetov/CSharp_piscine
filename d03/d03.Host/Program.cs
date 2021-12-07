@@ -14,6 +14,25 @@ namespace d03.Host
 {
     class Program
     {
+        static void DisplayMedia(MediaOfToday[] media)
+        {
+            for (int i = 0; i < media.Length; i++)
+            {
+                Console.WriteLine(media[i].Date.ToString("d"));
+                Console.Write($"'{media[i].Title}'");
+                if (media[i].Copyright != null)
+                {
+                    Console.WriteLine($" by {media[i].Copyright}");
+                }
+                else
+                {
+                    Console.WriteLine();
+                }
+                Console.WriteLine($"{media[i].Explanation}");
+                Console.WriteLine($"{media[i].Url}");
+                Console.WriteLine();
+            }
+        }
         static async Task Main(string[] args)
         {   
             // Reading the configuration
@@ -23,15 +42,17 @@ namespace d03.Host
                 .AddJsonFile(configFile);
             var configuration = builder.Build();
             var apiKey = configuration["ApiKey"];
-            Console.WriteLine(apiKey);
+            // Console.WriteLine(apiKey);
 
             // Get command from command line as arguments
             if (args.Length == 2 && args[0] == "apod" && Int32.Parse(args[1]) > 0)
             {
+                //apiKey = "";
                 var resultCount = Int32.Parse(args[1]);
                 var apodClient = new ApodClient(apiKey);
                 var mediaOfToday = await apodClient.GetAsync(resultCount);
-                apodClient.DisplayMedia();
+                if (mediaOfToday != null)
+                    DisplayMedia(mediaOfToday);
                 // вывод данных здесь надо реализовать
             }
             else
@@ -40,7 +61,6 @@ namespace d03.Host
                 return;
             }
             // ACviVFWbJxyNf7Yqp5wPj0R6B6FKRYKdPebV1GqA
-
         }
     }
 } 
