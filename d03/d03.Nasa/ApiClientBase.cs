@@ -11,43 +11,25 @@ namespace d03.Nasa.Lib
     public abstract class ApiClientBase
     {
         protected string apiKey;
-        static readonly HttpClient client = new HttpClient();
-        protected ApiClientBase()
-        {
-        }
+        protected HttpClient client;
+        protected HttpResponseMessage response;
+
+        protected ApiClientBase() {}
         protected ApiClientBase(string apiKey)
         {
             this.apiKey = apiKey;
+            this.client = new HttpClient();
+            
+        }
+
+        protected async Task<HttpStatusCode> GetStatusCodeAsync(string url)
+        {
+            this.response = await client.GetAsync(url + this.apiKey);
+            return response.StatusCode;
         }
         protected async Task<T> HttpGetAsync<T>(string url)
         {
-            HttpResponseMessage response = await client.GetAsync(url);
-            //response.EnsureSuccessStatusCode();
             var responseBody = await response.Content.ReadAsStringAsync();
-            try
-            {
-                if (response.StatusCode == HttpStatusCode.OK)
-                {
-                    Console.WriteLine(responseBody);
-                    return JsonSerializer.Deserialize<T>(responseBody);
-                }
-                else
-                {
-                    Console.WriteLine($"2GET \"{url}\" returned {response.StatusCode.ToString()}:");
-                    Console.WriteLine($"0:{response.ReasonPhrase}  1:{response.TrailingHeaders} 2:{response.Content.Headers}");
-                    return JsonSerializer.Deserialize<T>(responseBody);
-                }
-            }
-            catch(WebException e)
-            {
-                Console.WriteLine($"0GET \"{url}\" returned {response.StatusCode.ToString()}");
-                Console.WriteLine(e.Status);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine($"1GET \"{url}\" returned {response.StatusCode.ToString()}");
-                Console.WriteLine(e.Message);
-            }
             return JsonSerializer.Deserialize<T>(responseBody);
         }
     }
