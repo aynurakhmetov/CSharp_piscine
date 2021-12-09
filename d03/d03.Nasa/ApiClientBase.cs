@@ -27,9 +27,11 @@ namespace d03.Nasa.Lib
             this.response = await client.GetAsync(url + this.apiKey);
             return response.StatusCode;
         }
+        
         protected async Task<T> HttpGetAsync<T>(string url)
         {
             var responseBody = await response.Content.ReadAsStringAsync();
+            //Console.WriteLine(responseBody);
             return JsonSerializer.Deserialize<T>(responseBody);
         }
     }

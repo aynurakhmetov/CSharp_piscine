@@ -21,14 +21,15 @@ namespace d03.Nasa.Lib
             if (statusCode == HttpStatusCode.OK)
             {
                 media = await this.HttpGetAsync<MediaOfToday[]>(this._url);
+                return media;
             }
             else
             {
                 Console.WriteLine($"GET \"{this._url}\" returned {statusCode.ToString()}:");
                 var responseBody = await this.response.Content.ReadAsStringAsync();
                 Console.WriteLine($"{responseBody}");
+                return null;
             }
-            return null;
         }
     }
 }
