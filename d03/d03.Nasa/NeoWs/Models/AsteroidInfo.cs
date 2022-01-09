@@ -8,35 +8,38 @@ using System.Text.Json.Serialization;
 
 namespace d03.Nasa.Lib
 {
-    class AsteroidInfo
+    public class AstInfo
     {
         [JsonPropertyName("near_earth_objects")]
-        public NearEarthObjects near_earth_objects { get; set; }
+        public NearEarthObjects NearEarthObjects { get; set; }
     }
     
     public class NearEarthObjects
     {
-       
-        [JsonProperty("2015-09-07")]
-        public List<_20150907> _20150907 { get; set; }
+        //[JsonPropertyName("2015-09-07")]
+        public Dictionary <String, AsteroidInfo> AsteroidInfoDic;
+        
+        // [JsonPropertyName()]
+        // public List<AsteroidInfo> AsteroidInfoList { get; set; }
     }
     
-    public class 20150907
+    public class AsteroidInfo
     {
-        public int id { get; set; }
-        public List<CloseApproachData> close_approach_data { get; set; }
+        [JsonPropertyName("id")]
+        public int Id { get; set; }
+        [JsonPropertyName("close_approach_data")]
+        public List<CloseApproachData> CloseApproachDataList { get; set; }
     }
         
     public class CloseApproachData
     {
-        public MissDistance miss_distance { get; set; }
+        [JsonPropertyName("miss_distance")]
+        public MissDistance MissDistance { get; set; }
     }
     
     public class MissDistance
     {
-        public string astronomical { get; set; }
-        public string lunar { get; set; }
-        public string kilometers { get; set; }
-        public string miles { get; set; }
+        [JsonPropertyName("kilometers")]
+        public string Kilometers { get; set; }
     }
 }
