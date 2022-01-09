@@ -1,20 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "9i3V0kf+70fQWU9pTTXJ2EW5fRT1J9jxwBRo1u+OvNRp0l5VGELjnEYjV2ryqBSki1oEdoy1VQGvHPMzK1VlJg==",
+  "dgSpecHash": "RHNdF/tYqzQ0IOQkGWo573K9lqCZEl0eL4exLSz25UM+rY5rg9XjUhIkh14eINA4ws9lIZpP4SpikdI3jLSn/A==",
   "success": true,
-  "projectFilePath": "E:\\Programming\\Ecole42\\CSharp_piscine\\d03\\d03.Host\\d03.Host.csproj",
+  "projectFilePath": "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d03/d03.Host/d03.Host.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Айнур\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.0\\microsoft.extensions.configuration.6.0.0.nupkg.sha512",
-    "C:\\Users\\Айнур\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\Айнур\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\6.0.0\\microsoft.extensions.configuration.fileextensions.6.0.0.nupkg.sha512",
-    "C:\\Users\\Айнур\\.nuget\\packages\\microsoft.extensions.configuration.json\\6.0.0\\microsoft.extensions.configuration.json.6.0.0.nupkg.sha512",
-    "C:\\Users\\Айнур\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\6.0.0\\microsoft.extensions.fileproviders.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\Айнур\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\6.0.0\\microsoft.extensions.fileproviders.physical.6.0.0.nupkg.sha512",
-    "C:\\Users\\Айнур\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\6.0.0\\microsoft.extensions.filesystemglobbing.6.0.0.nupkg.sha512",
-    "C:\\Users\\Айнур\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
-    "C:\\Users\\Айнур\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
-    "C:\\Users\\Айнур\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
-    "C:\\Users\\Айнур\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
+    "/home/gmarva/.nuget/packages/microsoft.extensions.configuration/6.0.0/microsoft.extensions.configuration.6.0.0.nupkg.sha512",
+    "/home/gmarva/.nuget/packages/microsoft.extensions.configuration.abstractions/6.0.0/microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
+    "/home/gmarva/.nuget/packages/microsoft.extensions.configuration.fileextensions/6.0.0/microsoft.extensions.configuration.fileextensions.6.0.0.nupkg.sha512",
+    "/home/gmarva/.nuget/packages/microsoft.extensions.configuration.json/6.0.0/microsoft.extensions.configuration.json.6.0.0.nupkg.sha512",
+    "/home/gmarva/.nuget/packages/microsoft.extensions.fileproviders.abstractions/6.0.0/microsoft.extensions.fileproviders.abstractions.6.0.0.nupkg.sha512",
+    "/home/gmarva/.nuget/packages/microsoft.extensions.fileproviders.physical/6.0.0/microsoft.extensions.fileproviders.physical.6.0.0.nupkg.sha512",
+    "/home/gmarva/.nuget/packages/microsoft.extensions.filesystemglobbing/6.0.0/microsoft.extensions.filesystemglobbing.6.0.0.nupkg.sha512",
+    "/home/gmarva/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "/home/gmarva/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "/home/gmarva/.nuget/packages/system.text.encodings.web/6.0.0/system.text.encodings.web.6.0.0.nupkg.sha512",
+    "/home/gmarva/.nuget/packages/system.text.json/6.0.0/system.text.json.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }
