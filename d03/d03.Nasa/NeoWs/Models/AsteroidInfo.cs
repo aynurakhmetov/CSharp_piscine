@@ -11,22 +11,13 @@ namespace d03.Nasa.Lib
     public class AstInfo
     {
         [JsonPropertyName("near_earth_objects")]
-        public NearEarthObjects NearEarthObjects { get; set; }
-    }
-    
-    public class NearEarthObjects
-    {
-        //[JsonPropertyName("2015-09-07")]
-        public Dictionary <String, AsteroidInfo> AsteroidInfoDic;
-        
-        // [JsonPropertyName()]
-        // public List<AsteroidInfo> AsteroidInfoList { get; set; }
+        public Dictionary <string, AsteroidInfo[]> AsteroidInfos { get; set; }
     }
     
     public class AsteroidInfo
     {
         [JsonPropertyName("id")]
-        public int Id { get; set; }
+        public string Id { get; set; }
         [JsonPropertyName("close_approach_data")]
         public List<CloseApproachData> CloseApproachDataList { get; set; }
     }
