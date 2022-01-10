@@ -24,6 +24,7 @@ namespace d03.Nasa.Lib
 
         protected async Task<HttpStatusCode> GetStatusCodeAsync(string url)
         {
+            Console.WriteLine($"\n URL = {url}\n");
             this.response = await client.GetAsync(url + this.apiKey);
             return response.StatusCode;
         }
