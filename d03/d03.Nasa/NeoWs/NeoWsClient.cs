@@ -18,24 +18,23 @@ namespace d03.Nasa.Lib
         public NeoWsClient() {}
         public NeoWsClient(string apiKey) : base(apiKey) {}
 
-        private async Task<List<int>> GetAsteroidId(int resultCount)
+        private async Task<List<string>> GetAsteroidId(int resultCount)
         {
-            Console.WriteLine("\nI AM HERE 0\n");
-            Dictionary<String, AsteroidInfo> asteroidInfo;
+            var asteroidInfo = new AstInfo();
             
             var statusCode = await this.GetStatusCodeAsync(this._url);
             if (statusCode == HttpStatusCode.OK)
             {
-                Console.WriteLine("\nI AM HERE 01\n");
-                asteroidInfo = await this.HttpGetAsync<Dictionary <String, AsteroidInfo> >(this._url);
-                Console.WriteLine($"\nI AM HERE 02 {asteroidInfo.Count}\n");
-                var id = new List<int>();
-                // int i = 0;
-                // while (i < resultCount && i < asteroidInfo.NearEarthObjects.AsteroidInfoList.Count)
-                // {
-                //     id.Add(asteroidInfo.NearEarthObjects.AsteroidInfoList[i].Id);
-                //     i++;
-                // }
+                asteroidInfo = await this.HttpGetAsync<AstInfo>(this._url);
+                Console.WriteLine($"\nI AM HERE 02 {asteroidInfo.AsteroidInfos.Count}\n");
+                var id = new List<string>();
+                foreach (var ids in asteroidInfo.AsteroidInfos)
+                {
+                    for (int j = 0; j < ids.Value.Length; j++)
+                    {
+                        id.Add(ids.Value[j].Id);
+                    }
+                }
                 return id;
             }
             else
@@ -52,22 +51,35 @@ namespace d03.Nasa.Lib
             this._url = this._url + asteroidRequest.StartDate + this._endDate + asteroidRequest.EndDate + this._api;
             Console.WriteLine($"\nresCount = {asteroidRequest.ResultCount}\n");
             var id = GetAsteroidId(asteroidRequest.ResultCount);
-            this.asteroidLookup = new AsteroidLookup[id.Result.Count];
-
-            var newUrl = this._urlNeoLookup + id.Result[0] + "?api_key=";
-            var statusCode = await this.GetStatusCodeAsync(newUrl);
-            if (statusCode == HttpStatusCode.OK)
-            {
-                asteroidLookup = await this.HttpGetAsync<AsteroidLookup[]>(newUrl);
-                return asteroidLookup;
-            }
+            if (id.Result == null)
+                return null;
+            int count;
+            if (asteroidRequest.ResultCount > 0 && asteroidRequest.ResultCount <= id.Result.Count)
+                count = asteroidRequest.ResultCount;
             else
             {
-                Console.WriteLine($"GET \"{this._url}\" returned {statusCode.ToString()}:");
-                var responseBody = await this.response.Content.ReadAsStringAsync();
-                Console.WriteLine($"{responseBody}");
-                return null;
+                count = id.Result.Count;
             }
+            this.asteroidLookup = new AsteroidLookup[count];
+
+            for (int i = 0; i < count; i++)
+            {
+                var newUrl = this._urlNeoLookup + id.Result[i] + "?api_key=";
+                var statusCode = await this.GetStatusCodeAsync(newUrl);
+                if (statusCode == HttpStatusCode.OK)
+                {
+                    asteroidLookup[i] = await this.HttpGetAsync<AsteroidLookup>(newUrl);
+                }
+                else
+                {
+                    Console.WriteLine($"GET \"{this._url}\" returned {statusCode.ToString()}:");
+                    var responseBody = await this.response.Content.ReadAsStringAsync();
+                    Console.WriteLine($"{responseBody}");
+                    return null;
+                }
+                
+            }
+            return asteroidLookup;
         }
     }
 }
