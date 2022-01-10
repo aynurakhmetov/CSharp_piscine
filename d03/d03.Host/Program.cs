@@ -74,13 +74,21 @@ namespace d03.Host
                     DisplayMedia(mediaOfToday);
                 // вывод данных здесь надо реализовать
             }
-            else if (args.Length == 2 && args[0] == "neows" && int.TryParse(args[1], out resultCount) && resultCount > 0)
+            else if (args.Length <= 2 && args[0] == "neows" )
             {
-                neoWs.ResultCount = resultCount;
+                if (args.Length == 2 && int.TryParse(args[1], out resultCount) && resultCount > 0)
+                    neoWs.ResultCount = resultCount;
+                else if (args.Length == 1)
+                    neoWs.ResultCount = -1;
+                else
+                {
+                    Console.WriteLine("Incorrect input arguments");
+                    return;
+                }
                 var neoWsClient = new NeoWsClient(apiKey);
                 var asteroid = await neoWsClient.GetAsync(neoWs);
-                //if (asteroid != null)
-                //    DisplayAsteroid(asteroid);
+                if (asteroid != null)
+                    DisplayAsteroid(asteroid);
             }
             else
             {
