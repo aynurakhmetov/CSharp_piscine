@@ -1,8 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.Dynamic;
+using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace d03.Nasa.Lib
@@ -18,7 +17,7 @@ namespace d03.Nasa.Lib
         public NeoWsClient() {}
         public NeoWsClient(string apiKey) : base(apiKey) {}
 
-        private async Task<List<string>> GetAsteroidId(int resultCount)
+        private async Task<Dictionary<string, string>> GetAsteroidId(int resultCount)
         {
             var asteroidInfo = new AstInfo();
             
@@ -27,12 +26,12 @@ namespace d03.Nasa.Lib
             {
                 asteroidInfo = await this.HttpGetAsync<AstInfo>(this._url);
                 Console.WriteLine($"\nI AM HERE 02 {asteroidInfo.AsteroidInfos.Count}\n");
-                var id = new List<string>();
+                var id = new Dictionary<string, string>();
                 foreach (var ids in asteroidInfo.AsteroidInfos)
                 {
                     for (int j = 0; j < ids.Value.Length; j++)
                     {
-                        id.Add(ids.Value[j].Id);
+                        id.Add(ids.Value[j].Id, ids.Value[j].CloseApproachDataList[0].MissDistance.Kilometers);
                     }
                 }
                 return id;
@@ -50,6 +49,7 @@ namespace d03.Nasa.Lib
             this._asteroidRequest = asteroidRequest;
             this._url = this._url + asteroidRequest.StartDate + this._endDate + asteroidRequest.EndDate + this._api;
             Console.WriteLine($"\nresCount = {asteroidRequest.ResultCount}\n");
+            
             var id = GetAsteroidId(asteroidRequest.ResultCount);
             if (id.Result == null)
                 return null;
@@ -60,15 +60,34 @@ namespace d03.Nasa.Lib
             {
                 count = id.Result.Count;
             }
+            Console.WriteLine($"\nfinaly count = {count}\n");
             this.asteroidLookup = new AsteroidLookup[count];
 
-            for (int i = 0; i < count; i++)
+            var selectedId = from i in id.Result
+                orderby double.Parse(i.Value)
+                select i.Key;
+            
+            var selectedId2 = from i in id.Result
+                orderby double.Parse(i.Value)
+                select i;
+
+            foreach (var idk in selectedId2)
             {
-                var newUrl = this._urlNeoLookup + id.Result[i] + "?api_key=";
+                Console.WriteLine($"id = {idk.Key}, kiloms = {idk.Value}");
+            }
+            //Полученный список сортируем по расстоянию от Земли и берем из него только необходимое нам количество элементов (ResultCount) с наименьшим расстоянием
+            //Для фильтрации коллекций, выборки данных, выборки необходимого их количества не используйте циклы!
+            //Вам помогут расширения LINQ: Select/SelectMany, Where, OrderBy/OrderByDescending, First/Last/Single, FirstOrDefault/LastOrDefault/SingleOrDefault, Take/Skip.
+
+            int j = 0;
+            foreach (var ids in selectedId)
+            {
+                var newUrl = this._urlNeoLookup + ids + "?api_key=";
+                Console.WriteLine($"\nfinaly count = {count}\n");
                 var statusCode = await this.GetStatusCodeAsync(newUrl);
                 if (statusCode == HttpStatusCode.OK)
                 {
-                    asteroidLookup[i] = await this.HttpGetAsync<AsteroidLookup>(newUrl);
+                    asteroidLookup[j] = await this.HttpGetAsync<AsteroidLookup>(newUrl);
                 }
                 else
                 {
@@ -77,7 +96,9 @@ namespace d03.Nasa.Lib
                     Console.WriteLine($"{responseBody}");
                     return null;
                 }
-                
+                j++;
+                if (j == count)
+                    break;
             }
             return asteroidLookup;
         }
