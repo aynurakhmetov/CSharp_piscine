@@ -1,4 +1,4 @@
-namespace d03.Nasa.Lib
+namespace d03.Nasa
 {
     interface INasaClient<in TIn, out TOut>
     {
