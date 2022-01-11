@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
-namespace d03.Nasa.Lib
+namespace d03.Nasa
 {
     public class AstInfo
     {
