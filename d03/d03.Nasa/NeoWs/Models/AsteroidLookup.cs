@@ -1,21 +1,7 @@
 using System.Text.Json.Serialization;
 
-namespace d03.Nasa.Lib
+namespace d03.Nasa
 {
-    public class OrbitClass
-    {
-        [JsonPropertyName("orbit_class_type")]
-        public string OrbitClassType { get; set; }
-        [JsonPropertyName("orbit_class_description")]
-        public string OrbitClassDescription { get; set; }
-    }
-
-    public class OrbitalData
-    {
-        [JsonPropertyName("orbit_class")]
-        public OrbitClass OrbitClass { get; set; }
-    }
-    
     public class AsteroidLookup
     {
         [JsonPropertyName("neo_reference_id")]
@@ -28,5 +14,19 @@ namespace d03.Nasa.Lib
         public bool IsPotentiallyHazardousAsteroid { get; set; }
         [JsonPropertyName("orbital_data")]
         public OrbitalData OrbitalData { get; set; }
+    }
+    
+    public class OrbitalData
+    {
+        [JsonPropertyName("orbit_class")]
+        public OrbitClass OrbitClass { get; set; }
+    }
+    
+    public class OrbitClass
+    {
+        [JsonPropertyName("orbit_class_type")]
+        public string OrbitClassType { get; set; }
+        [JsonPropertyName("orbit_class_description")]
+        public string OrbitClassDescription { get; set; }
     }
 }
