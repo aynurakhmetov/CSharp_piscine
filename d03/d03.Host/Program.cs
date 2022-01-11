@@ -2,9 +2,7 @@
 using System.IO;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
-using d03.Nasa.Lib;
-
-
+using d03.Nasa;
 using System.Net;
 using System.Net.Http;
 using System.Text.Json;
@@ -14,6 +12,18 @@ namespace d03.Host
 {
     class Program
     {
+        static bool CheckStringForPositiveNumber(string stringForCheck, out int stringToInt)
+        {
+            if (int.TryParse(stringForCheck, out stringToInt) && stringToInt > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        
         static void DisplayMedia(MediaOfToday[] media)
         {
             for (int i = 0; i < media.Length; i++)
@@ -23,10 +33,6 @@ namespace d03.Host
                 if (media[i].Copyright != null)
                 {
                     Console.WriteLine($" by {media[i].Copyright}");
-                }
-                else
-                {
-                    //Console.WriteLine();
                 }
                 Console.WriteLine($"{media[i].Explanation}");
                 Console.WriteLine($"{media[i].Url}");
@@ -40,63 +46,77 @@ namespace d03.Host
             {
                 Console.WriteLine($"- Asteroid {asteroid[i].Name}, SPK-ID: {asteroid[i].Id}");
                 Console.Write($"IS POTENTIALLY HAZARDOUS!");
-                Console.WriteLine($"Classification: {asteroid[i].OrbitalData.OrbitClass.OrbitClassType}, {asteroid[i].OrbitalData.OrbitClass.OrbitClassDescription}.");
+                Console.WriteLine($"Classification: {asteroid[i].OrbitalData.OrbitClass.OrbitClassType}," + 
+                                  $"{asteroid[i].OrbitalData.OrbitClass.OrbitClassDescription}.");
                 Console.WriteLine($"Url: {asteroid[i].NasaUrl}.");
                 Console.WriteLine();
             }
         }
         
+        static async Task<bool> StartApodAsync(string apiKey, int resultCount)
+        {
+            var apodClient = new ApodClient(apiKey);
+            var mediaOfToday = await apodClient.GetAsync(resultCount);
+            if (mediaOfToday != null)
+            {
+                DisplayMedia(mediaOfToday);
+                return false;
+            }
+            return true;
+        }
+
+        static async Task<bool> StartNeoWsAsync(string apiKey, int resultCount, string[] args, AsteroidRequest asteroidRequest)
+        {
+            if (args.Length == 2)
+            {
+                asteroidRequest.ResultCount = resultCount;
+            }
+            else if (args.Length == 1)
+            {
+                asteroidRequest.ResultCount = -1;
+            }
+            var neoWsClient = new NeoWsClient(apiKey);
+            var asteroid = await neoWsClient.GetAsync(asteroidRequest);
+            if (asteroid != null)
+            {
+                DisplayAsteroid(asteroid);
+                return false;
+            }
+            return true;
+        }
+        
         static async Task Main(string[] args)
-        {   
-            // Reading the configuration
+        {
+            const int oneArgFromConsole = 1;
+            const int twoArgFromConsole = 2;
+
             const string configFile = "appsettings.json";
             var builder = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile(configFile);
             var configuration = builder.Build();
-            var apiKey = configuration["ApiKey"];
-            //Console.WriteLine($"ApiKey = {apiKey}");
-
-            var neoWs = new AsteroidRequest();
-            neoWs.StartDate = configuration["NeoWs:StartDate"];
-            neoWs.EndDate = configuration["NeoWs:EndDate"];
-            //Console.WriteLine($"NeoWs StartDate = {neoWs.StartDate}, EndDate = {neoWs.EndDate}");
             
-            // Get command from command line as arguments
-            int resultCount;
+            var apiKey = configuration["ApiKey"];
+            var asteroidRequest = new AsteroidRequest();
+            asteroidRequest.StartDate = configuration["NeoWs:StartDate"];
+            asteroidRequest.EndDate = configuration["NeoWs:EndDate"];
+
+            int resultCount = 0;
             //apiKey = "";
-            if (args.Length == 2 && args[0] == "apod" && int.TryParse(args[1], out resultCount) && resultCount > 0)
+            if (args.Length == twoArgFromConsole && args[0] == "apod" && CheckStringForPositiveNumber(args[1], out resultCount))
             {
-                var apodClient = new ApodClient(apiKey);
-                var mediaOfToday = await apodClient.GetAsync(resultCount);
-                //Console.WriteLine($"AAA {mediaOfToday[0].Title}");
-                if (mediaOfToday != null)
-                    DisplayMedia(mediaOfToday);
-                // вывод данных здесь надо реализовать
+                await StartApodAsync(apiKey, resultCount);
             }
-            else if (args.Length <= 2 && args[0] == "neows" )
+            else if ((args.Length == oneArgFromConsole || args.Length == twoArgFromConsole &&
+                         CheckStringForPositiveNumber(args[1], out resultCount)) && args[0] == "neows")
             {
-                if (args.Length == 2 && int.TryParse(args[1], out resultCount) && resultCount > 0)
-                    neoWs.ResultCount = resultCount;
-                else if (args.Length == 1)
-                    neoWs.ResultCount = -1;
-                else
-                {
-                    Console.WriteLine("Incorrect input arguments");
-                    return;
-                }
-                var neoWsClient = new NeoWsClient(apiKey);
-                var asteroid = await neoWsClient.GetAsync(neoWs);
-                if (asteroid != null)
-                    DisplayAsteroid(asteroid);
+                await StartNeoWsAsync(apiKey, resultCount, args, asteroidRequest);
             }
             else
             {
                 Console.WriteLine("Incorrect input arguments");
                 return;
             }
-            // ACviVFWbJxyNf7Yqp5wPj0R6B6FKRYKdPebV1GqA
-            // как правильно давать названия коммитам
         }
     }
 } 
