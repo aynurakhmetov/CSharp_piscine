@@ -27,10 +27,7 @@ namespace d03.Nasa
             }
             else
             {
-                Console.WriteLine($"GET \"{this._url}\" returned {statusCode.ToString()}:");
-                var response = await GetResponseAsync(this._url);
-                var responseBody = await response.Content.ReadAsStringAsync();
-                Console.WriteLine($"{responseBody}");
+                await DisplayErrorMessageAsync(this._url, statusCode);
                 return null;
             }
         }

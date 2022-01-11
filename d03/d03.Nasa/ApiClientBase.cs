@@ -1,3 +1,4 @@
+using System;
 using System.Net;
 using System.Net.Http;
 using System.Text.Json;
@@ -34,6 +35,15 @@ namespace d03.Nasa
             var response = await GetResponseAsync(url);
             var responseBody = await response.Content.ReadAsStringAsync();
             return JsonSerializer.Deserialize<T>(responseBody);
+        }
+
+        protected async Task<bool> DisplayErrorMessageAsync(string url, HttpStatusCode statusCode)
+        {
+            Console.WriteLine($"GET \"{url}\" returned {statusCode.ToString()}:");
+            var response = await GetResponseAsync(url);
+            var responseBody = await response.Content.ReadAsStringAsync();
+            Console.WriteLine($"{responseBody}");
+            return true;
         }
     }
 }

@@ -3,10 +3,10 @@ using System.Text.Json.Serialization;
 
 namespace d03.Nasa
 {
-    public class AstInfo
+    public class NearEarthAsteroid
     {
         [JsonPropertyName("near_earth_objects")]
-        public Dictionary <string, AsteroidInfo[]> AsteroidInfos { get; set; }
+        public Dictionary <string, AsteroidInfo[]> AsteroidInfoFromDate { get; set; }
     }
     
     public class AsteroidInfo
