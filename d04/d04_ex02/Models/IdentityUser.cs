@@ -19,8 +19,7 @@ namespace d04_ex02
         public virtual string UserName { get; set; }
         [NoDisplay]
         public virtual string NormalizedUserName { get; set; }
-        [Description("Email address")]
-        [DefaultValue("test@test")]
+        [Description("Email address"), DefaultValue("test@test")]
         public virtual string Email { get; set; }
         [NoDisplay]
         public virtual string NormalizedEmail { get; set; }
@@ -30,7 +29,9 @@ namespace d04_ex02
         public virtual string PasswordHash { get; set; }
         [NoDisplay]
         public virtual string SecurityStamp { get; set; }
+        
         public virtual string ConcurrencyStamp() => Guid.NewGuid().ToString();
+        
         [Description("Phone number"), DefaultValue("1234567890")]
         public virtual string PhoneNumber { get; set; }
         [NoDisplay]
@@ -41,6 +42,7 @@ namespace d04_ex02
         public virtual DateTimeOffset? LockoutEnd { get; set; }
         [NoDisplay]
         public virtual bool LockoutEnabled { get; set; }
+        
         public override string ToString() => $"User: {UserName}, {Email}, {PhoneNumber}";
     }
 }
