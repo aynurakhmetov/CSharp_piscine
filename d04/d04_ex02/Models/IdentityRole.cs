@@ -11,5 +11,4 @@ namespace d04_ex02
 
         public override string ToString() => $"{Name}, {Description}";
     }
-
 }
