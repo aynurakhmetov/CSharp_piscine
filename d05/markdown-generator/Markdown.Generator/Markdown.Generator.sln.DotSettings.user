@@ -1,0 +1,15 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=59f32ad5_002D6ffd_002D420e_002Da8ed_002D2e6be1768d32/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Given_Test_2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::2B268F82-6853-415F-A0A6-A1AF6E257D59::net5.0::Markdown.Generator.Core.Tests.GithubWikiDocumentBuilderTests&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	
+	
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9a08ea3b_002Defaa_002D49bf_002Db1cd_002Dd5ccf1c4e0d4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Given_Test" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::2B268F82-6853-415F-A0A6-A1AF6E257D59::net5.0::Markdown.Generator.Core.Tests.GithubWikiDocumentBuilderTests.Given_Test&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::2B268F82-6853-415F-A0A6-A1AF6E257D59::net5.0::Markdown.Generator.Core.Tests.GithubWikiDocumentBuilderTests.Given_Test_2&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	</wpf:ResourceDictionary>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Markdown.Generator.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Markdown.Generator.Core.Markdown.Elements.Code">
+            <summary>
+            Represents markdown code-block
+            e.g ```csharp\nRandom string\n```\n 
+            </summary>
+        </member>
+        <member name="T:Markdown.Generator.Core.Markdown.Elements.CodeQuote">
+            <summary>
+            Represents markdown single-line code-block
+            e.g `code` 
+            </summary>
+        </member>
+        <member name="T:Markdown.Generator.Core.Markdown.Elements.Header">
+            <summary>
+            Represents markdown header
+            e.g ## header\n
+            </summary>
+        </member>
+        <member name="T:Markdown.Generator.Core.Markdown.Elements.Image">
+            <summary>
+            Represents markdown image
+            e.g ![title](url)
+            </summary>
+        </member>
+        <member name="T:Markdown.Generator.Core.Markdown.Elements.Link">
+            <summary>
+            Represents markdown link
+            e.g [title](url)
+            </summary>
+        </member>
+        <member name="T:Markdown.Generator.Core.Markdown.Elements.List">
+            <summary>
+            Represents markdown list item
+            e.g - list\n
+            </summary>
+        </member>
+    </members>
+</doc>

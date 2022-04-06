@@ -1,0 +1,13 @@
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Markdown.Generator.Core/bin/Debug/net5.0/Markdown.Generator.Core.xml
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Markdown.Generator.Core/bin/Debug/net5.0/Markdown.Generator.Core.deps.json
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Markdown.Generator.Core/bin/Debug/net5.0/Markdown.Generator.Core.dll
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Markdown.Generator.Core/bin/Debug/net5.0/ref/Markdown.Generator.Core.dll
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Markdown.Generator.Core/bin/Debug/net5.0/Markdown.Generator.Core.pdb
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Markdown.Generator.Core/obj/Debug/net5.0/Markdown.Generator.Core.csproj.AssemblyReference.cache
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Markdown.Generator.Core/obj/Debug/net5.0/Markdown.Generator.Core.GeneratedMSBuildEditorConfig.editorconfig
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Markdown.Generator.Core/obj/Debug/net5.0/Markdown.Generator.Core.AssemblyInfoInputs.cache
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Markdown.Generator.Core/obj/Debug/net5.0/Markdown.Generator.Core.AssemblyInfo.cs
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Markdown.Generator.Core/obj/Debug/net5.0/Markdown.Generator.Core.csproj.CoreCompileInputs.cache
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Markdown.Generator.Core/obj/Debug/net5.0/Markdown.Generator.Core.dll
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Markdown.Generator.Core/obj/Debug/net5.0/ref/Markdown.Generator.Core.dll
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Markdown.Generator.Core/obj/Debug/net5.0/Markdown.Generator.Core.pdb

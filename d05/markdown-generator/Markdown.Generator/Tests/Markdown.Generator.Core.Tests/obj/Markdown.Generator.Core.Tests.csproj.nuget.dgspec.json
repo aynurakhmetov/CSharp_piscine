@@ -1,0 +1,201 @@
+{
+  "format": 1,
+  "restore": {
+    "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Tests/Markdown.Generator.Core.Tests/Markdown.Generator.Core.Tests.csproj": {}
+  },
+  "projects": {
+    "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Markdown.Generator.Application/Markdown.Generator.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Markdown.Generator.Application/Markdown.Generator.Application.csproj",
+        "projectName": "Markdown.Generator.Application",
+        "projectPath": "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Markdown.Generator.Application/Markdown.Generator.Application.csproj",
+        "packagesPath": "/home/gmarva/.nuget/packages/",
+        "outputPath": "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Markdown.Generator.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/gmarva/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Markdown.Generator.Core/Markdown.Generator.Core.csproj": {
+                "projectPath": "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Markdown.Generator.Core/Markdown.Generator.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.404/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Markdown.Generator.Core/Markdown.Generator.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Markdown.Generator.Core/Markdown.Generator.Core.csproj",
+        "projectName": "Markdown.Generator.Core",
+        "projectPath": "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Markdown.Generator.Core/Markdown.Generator.Core.csproj",
+        "packagesPath": "/home/gmarva/.nuget/packages/",
+        "outputPath": "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Markdown.Generator.Core/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/gmarva/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.404/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Tests/Markdown.Generator.Core.Tests/Markdown.Generator.Core.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Tests/Markdown.Generator.Core.Tests/Markdown.Generator.Core.Tests.csproj",
+        "projectName": "Markdown.Generator.Core.Tests",
+        "projectPath": "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Tests/Markdown.Generator.Core.Tests/Markdown.Generator.Core.Tests.csproj",
+        "packagesPath": "/home/gmarva/.nuget/packages/",
+        "outputPath": "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Tests/Markdown.Generator.Core.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/gmarva/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Markdown.Generator.Application/Markdown.Generator.Application.csproj": {
+                "projectPath": "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Markdown.Generator.Application/Markdown.Generator.Application.csproj"
+              },
+              "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Markdown.Generator.Core/Markdown.Generator.Core.csproj": {
+                "projectPath": "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d05/markdown-generator/Markdown.Generator/Markdown.Generator.Core/Markdown.Generator.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.9.4, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.17.2, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.404/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
