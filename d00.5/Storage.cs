@@ -7,7 +7,6 @@ namespace d00._05_ex00
         {
             this.NumberOfItemsInStorage = numberOfItems;
         }
-        public bool IsEmpty() => this.NumberOfItemsInStorage == 0;
+        public bool IsEmpty() => this.NumberOfItemsInStorage <= 0;
     }
 }
-

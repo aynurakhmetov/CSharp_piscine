@@ -1,0 +1,16 @@
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d00.5/bin/Debug/net5.0/d00.5
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d00.5/bin/Debug/net5.0/d00.5.deps.json
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d00.5/bin/Debug/net5.0/d00.5.runtimeconfig.json
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d00.5/bin/Debug/net5.0/d00.5.runtimeconfig.dev.json
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d00.5/bin/Debug/net5.0/d00.5.dll
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d00.5/bin/Debug/net5.0/ref/d00.5.dll
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d00.5/bin/Debug/net5.0/d00.5.pdb
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d00.5/obj/Debug/net5.0/d00.5.csproj.AssemblyReference.cache
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d00.5/obj/Debug/net5.0/d00.5.GeneratedMSBuildEditorConfig.editorconfig
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d00.5/obj/Debug/net5.0/d00.5.AssemblyInfoInputs.cache
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d00.5/obj/Debug/net5.0/d00.5.AssemblyInfo.cs
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d00.5/obj/Debug/net5.0/d00.5.csproj.CoreCompileInputs.cache
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d00.5/obj/Debug/net5.0/d00.5.dll
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d00.5/obj/Debug/net5.0/ref/d00.5.dll
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d00.5/obj/Debug/net5.0/d00.5.pdb
+/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d00.5/obj/Debug/net5.0/d00.5.genruntimeconfig.cache

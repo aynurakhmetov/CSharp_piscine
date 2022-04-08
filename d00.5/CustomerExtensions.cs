@@ -30,6 +30,7 @@ namespace d00._05_ex00
             
             foreach (var cr in cashRegistersList)
             {
+                allItemsOfCashRegister = 0;
                 foreach (var cs in cr.CustomersQueue)
                 {
                     allItemsOfCashRegister += cs.NumberOfItemsInCart;
