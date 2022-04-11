@@ -1,0 +1,78 @@
+{
+  "format": 1,
+  "restore": {
+    "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d06/dotnet_exercise06/d06/d06.csproj": {}
+  },
+  "projects": {
+    "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d06/dotnet_exercise06/d06/d06.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d06/dotnet_exercise06/d06/d06.csproj",
+        "projectName": "d06",
+        "projectPath": "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d06/dotnet_exercise06/d06/d06.csproj",
+        "packagesPath": "/home/gmarva/.nuget/packages/",
+        "outputPath": "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d06/dotnet_exercise06/d06/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/gmarva/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[5.0.0-preview.3.20215.2, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[5.0.0-preview.3.20215.2, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[5.0.0-preview.3.20215.2, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[5.0.0-preview.3.20215.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.404/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
