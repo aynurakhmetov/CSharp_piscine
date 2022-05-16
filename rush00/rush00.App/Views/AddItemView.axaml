@@ -1,0 +1,46 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="500"
+             x:Class="rush00.App.Views.AddItemView">
+    <StackPanel Spacing="8" Margin="10">
+        <StackPanel.Styles>
+            <Style Selector="TextBox">
+                <Setter Property="CornerRadius" Value="3" />
+            </Style>
+            <Style Selector="DatePicker">
+                <Setter Property="CornerRadius" Value="3" />
+            </Style>
+            <Style Selector="NumericUpDown">
+                <Setter Property="CornerRadius" Value="3" />
+            </Style>
+            <Style Selector="Button">
+                <Setter Property="CornerRadius" Value="3" />
+            </Style>
+        </StackPanel.Styles>
+                
+        <StackPanel>
+            <TextBlock >Set a habit to track:</TextBlock>
+            <TextBox AcceptsReturn="False" Text="{Binding Title}"/>   
+        </StackPanel>
+                
+        <StackPanel>
+            <TextBlock>What would be a motivation:</TextBlock>
+            <TextBox AcceptsReturn="False" Text="{Binding Motivation}"/>
+        </StackPanel>
+                
+        <DatePicker Header="When will you start:" SelectedDate="{Binding DateOfStart}"/>
+                
+        <StackPanel>
+            <TextBlock>How many days you want to challange yourself for:</TextBlock>
+            <NumericUpDown Value="{Binding DaysToChalenge}"/>
+        </StackPanel>
+                
+        <Button Width="80" Foreground="Black" Background="#c0c0c0" 
+                HorizontalAlignment="Left" VerticalAlignment="Top"
+                DockPanel.Dock="Bottom" Command="{Binding Start}">
+            Let's start!
+        </Button>
+    </StackPanel>
+</UserControl>

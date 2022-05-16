@@ -7,82 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5dabd08-97a9-4885-ac1d-bcd0323fd92b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.d06/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.d06/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.d06/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.d06/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.d06/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.d06/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/Extensions/CustomerExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/Models/Customer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/Models/Register.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/Models/Shop.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/Models/Storage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/Microsoft.Extensions.Configuration.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/Microsoft.Extensions.Configuration.Binder.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/Microsoft.Extensions.Configuration.CommandLine.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/Microsoft.Extensions.Configuration.EnvironmentVariables.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/Microsoft.Extensions.Configuration.FileExtensions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/Microsoft.Extensions.Configuration.Json.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/Microsoft.Extensions.Configuration.UserSecrets.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/Microsoft.Extensions.Configuration.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/Microsoft.Extensions.DependencyInjection.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/Microsoft.Extensions.FileProviders.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/Microsoft.Extensions.FileProviders.Physical.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/Microsoft.Extensions.FileSystemGlobbing.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/Microsoft.Extensions.Hosting.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/Microsoft.Extensions.Hosting.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/Microsoft.Extensions.Logging.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/Microsoft.Extensions.Logging.Configuration.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/Microsoft.Extensions.Logging.Console.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/Microsoft.Extensions.Logging.Debug.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/Microsoft.Extensions.Logging.EventLog.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/Microsoft.Extensions.Logging.EventSource.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/Microsoft.Extensions.Logging.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/Microsoft.Extensions.Options.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/Microsoft.Extensions.Primitives.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/System.Diagnostics.EventLog.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/d06" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/d06.deps.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/d06.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/d06.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/d06.runtimeconfig.dev.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/d06.runtimeconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/ref/d06.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/bin/Debug/net5.0/runtimes/win/lib/netcoreapp2.0/System.Diagnostics.EventLog.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/d06.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/obj/Debug/net5.0/apphost" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/obj/Debug/net5.0/d06.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/obj/Debug/net5.0/d06.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/obj/Debug/net5.0/d06.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/obj/Debug/net5.0/d06.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/obj/Debug/net5.0/d06.csproj.AssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/obj/Debug/net5.0/d06.csproj.CopyComplete" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/obj/Debug/net5.0/d06.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/obj/Debug/net5.0/d06.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/obj/Debug/net5.0/d06.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/obj/Debug/net5.0/d06.genruntimeconfig.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/obj/Debug/net5.0/d06.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/obj/Debug/net5.0/ref/d06.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/obj/d06.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/obj/d06.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/obj/d06.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/obj/project.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/obj/project.packagespec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d06/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d05/markdown-generator/Markdown.Generator/Markdown.Generator.Application/obj/Debug/net5.0/Markdown.Generator.Application.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../d05/markdown-generator/Markdown.Generator/Markdown.Generator.Application/obj/Debug/net5.0/Markdown.Generator.Application.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d05/markdown-generator/Markdown.Generator/Markdown.Generator.Core/obj/Debug/net5.0/Markdown.Generator.Core.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../d05/markdown-generator/Markdown.Generator/Markdown.Generator.Core/obj/Debug/net5.0/Markdown.Generator.Core.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../d05/markdown-generator/Markdown.Generator/Tests/Markdown.Generator.Core.Tests/obj/Debug/net5.0/Markdown.Generator.Core.Tests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../d05/markdown-generator/Markdown.Generator/Tests/Markdown.Generator.Core.Tests/obj/Debug/net5.0/Markdown.Generator.Core.Tests.csproj.AssemblyReference.cache" afterDir="false" />
-    </list>
+    <list default="true" id="d5dabd08-97a9-4885-ac1d-bcd0323fd92b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -151,7 +76,7 @@
       <option name="presentableId" value="Default" />
       <updated>1649256610666</updated>
       <workItem from="1649256641236" duration="31511000" />
-      <workItem from="1649663117336" duration="20070000" />
+      <workItem from="1649663117336" duration="20371000" />
     </task>
     <task id="LOCAL-00001" summary="ex00 is ready">
       <created>1649412209142</created>
@@ -160,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649412209143</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="d06 is ready">
+      <created>1649689197382</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1649689197382</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +119,7 @@
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="ex00 is ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="ex00 is ready" />
+    <MESSAGE value="d06 is ready" />
+    <option name="LAST_COMMIT_MESSAGE" value="d06 is ready" />
   </component>
 </project>

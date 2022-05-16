@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d02.1/d02.1.csproj": {}
+    "/media/inoor/SSD25/Programming/Ecole42/CSharp_piscine/d02.1/d02.1.csproj": {}
   },
   "projects": {
-    "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d02.1/d02.1.csproj": {
+    "/media/inoor/SSD25/Programming/Ecole42/CSharp_piscine/d02.1/d02.1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d02.1/d02.1.csproj",
+        "projectUniqueName": "/media/inoor/SSD25/Programming/Ecole42/CSharp_piscine/d02.1/d02.1.csproj",
         "projectName": "d02.1",
-        "projectPath": "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d02.1/d02.1.csproj",
-        "packagesPath": "/home/gmarva/.nuget/packages/",
-        "outputPath": "/media/gmarva/0EFE121D0EFE121D/Programming/Ecole42/CSharp_piscine/d02.1/obj/",
+        "projectPath": "/media/inoor/SSD25/Programming/Ecole42/CSharp_piscine/d02.1/d02.1.csproj",
+        "packagesPath": "/home/inoor/.nuget/packages/",
+        "outputPath": "/media/inoor/SSD25/Programming/Ecole42/CSharp_piscine/d02.1/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/gmarva/.nuget/NuGet/NuGet.Config"
+          "/home/inoor/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.402/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
         }
       }
     }
