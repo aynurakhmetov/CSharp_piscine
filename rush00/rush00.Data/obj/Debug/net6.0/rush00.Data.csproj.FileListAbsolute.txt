@@ -10,6 +10,3 @@
 /media/inoor/SSD25/Programming/Ecole42/CSharp_piscine/rush00/rush00.Data/obj/Debug/net6.0/refint/rush00.Data.dll
 /media/inoor/SSD25/Programming/Ecole42/CSharp_piscine/rush00/rush00.Data/obj/Debug/net6.0/rush00.Data.pdb
 /media/inoor/SSD25/Programming/Ecole42/CSharp_piscine/rush00/rush00.Data/obj/Debug/net6.0/ref/rush00.Data.dll
-/media/inoor/SSD25/Programming/Ecole42/CSharp_piscine/rush00/rush00.Data/bin/Debug/net6.0/rush00.App.dll
-/media/inoor/SSD25/Programming/Ecole42/CSharp_piscine/rush00/rush00.Data/bin/Debug/net6.0/rush00.App.pdb
-/media/inoor/SSD25/Programming/Ecole42/CSharp_piscine/rush00/rush00.Data/obj/Debug/net6.0/rush00.Data.csproj.CopyComplete

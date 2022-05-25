@@ -30,11 +30,11 @@
             <TextBox AcceptsReturn="False" Text="{Binding Motivation}"/>
         </StackPanel>
                 
-        <DatePicker Header="When will you start:" SelectedDate="{Binding DateOfStart}"/>
+        <DatePicker Header="When will you start:" SelectedDate ="{Binding DateOfStart}"/>
                 
         <StackPanel>
             <TextBlock>How many days you want to challange yourself for:</TextBlock>
-            <NumericUpDown Value="{Binding DaysToChalenge}"/>
+            <NumericUpDown Minimum="1" Value="{Binding DaysToChallenge}"/>
         </StackPanel>
                 
         <Button Width="80" Foreground="Black" Background="#c0c0c0" 

@@ -65,6 +65,11 @@ namespace rush00.App.ViewModels
                     {
                         MyTitle = model.Title;
                         List.Items.Add(model);
+                        
+                        Console.WriteLine($"333 vm {vm.Title}, {vm.Motivation}, {vm.DateOfStart}, " +
+                                          $"{vm.DaysToChallenge}");
+                        Console.WriteLine($"333 model {model.Title}, {model.Motivation}, {model.HabitCheckList.Count}, " +
+                                          $"{model.HabitCheckList[0].Date}, {model.IsFinished}");
                     }
 
                     Content = List;
